@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Created by Deekay1085 -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Development Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Web Development Quiz</h1>
+
+    <!-- Start screen -->
+    <section id="start-screen" class="card">
+      <p>8 multiple-choice questions on HTML, CSS and JavaScript. You get 15 seconds per question.</p>
+      <button id="start-btn" type="button" class="primary">Start quiz</button>
+    </section>
+
+    <!-- Question screen -->
+    <section id="quiz-screen" class="card" hidden>
+      <div class="top-row">
+        <span id="counter"></span>
+        <span id="timer" aria-live="off"></span>
+      </div>
+      <div class="bar"><div id="time-fill"></div></div>
+      <h2 id="question"></h2>
+      <div id="options" role="radiogroup" aria-labelledby="question"></div>
+      <button id="next-btn" type="button" class="primary" disabled>Next</button>
+    </section>
+
+    <!-- Result screen -->
+    <section id="result-screen" class="card" hidden>
+      <h2>Quiz complete</h2>
+      <p id="score" class="score"></p>
+      <p id="verdict"></p>
+      <h3>Review your answers</h3>
+      <ol id="review"></ol>
+      <button id="restart-btn" type="button" class="primary">Restart quiz</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
